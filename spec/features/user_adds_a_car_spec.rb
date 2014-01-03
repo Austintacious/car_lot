@@ -12,6 +12,15 @@ describe "User adds a new car" do
       click_on "Create Car"
       expect(page).to have_content("Bloo")
     end
+
+    it 'creates a car without a description' do
+      visit '/cars/new'
+      fill_in "Color", with: "Bloo"
+      fill_in "Year", with: 2012
+      fill_in "Milage", with: 525600
+      click_on "Create Car"
+      expect(page).to have_content("Bloo")
+    end
   end
 
   context "without valid attributes" do
