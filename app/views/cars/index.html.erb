@@ -1,9 +1,11 @@
-<h2>Welcome!</h2>
-<h1>Here are some cars, I guess!</h1>
+<h1>Welcome!</h1>
+<h2>Here are some cars, I guess!</h2>
 
 <% @cars.each do |car| %>
-  <p><%= car.color %></p>
-  <p><%= car.year %></p>
-  <p><%= car.milage %></p>
-  <p><%= car.description %></p>
+  <p>Color: <%= car.color %></p>
+  <p>Year: <%= car.year %></p>
+  <p>Mileage: <%= car.milage %></p>
+  <p>Description: <%= car.description %></p>
 <% end %>
+<br><hr>
+<%= link_to 'Add a Car', new_car_path %>
