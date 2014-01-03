@@ -1,0 +1,9 @@
+<h2>Welcome!</h2>
+<h1>Here are some cars, I guess!</h1>
+
+<% @cars.each do |car| %>
+  <p><%= car.color %></p>
+  <p><%= car.year %></p>
+  <p><%= car.milage %></p>
+  <p><%= car.description %></p>
+<% end %>
